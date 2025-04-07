@@ -1,15 +1,37 @@
-header,
-main,
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-size: 18px;
+}
+
+#top,
 #information,
 #quote,
-#cta {
-    padding: 0 10%;
+.cta {
+    padding: 0 15%;
+}
+
+#top,
+footer {
+    background-color: #1f2937;
+    color: white;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header h2 {
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
 }
 
 nav {
@@ -20,24 +42,56 @@ nav {
 main {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+    gap: 32px;
     padding-top: 64px;
     padding-bottom: 64px;
+    
+}
+
+main section {
+    flex-basis: 0;
+    flex: 1;
+}
+
+main section h1 {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0;
 }
 
 main figure {
+    background-color: gray;
+    align-self: stretch;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-grow: 1;
+    flex: 1;
+}
+
+button, .cta.container {
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background-color: #3882F6;
+    padding: 8px 32px;
+}
+
+button {
+    font-weight: bold;
 }
 
 #information {
     text-align: center;
     padding-top: 32px;
     padding-bottom: 64px;
+}
+
+#information h2 {
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: 900;
 }
 
 #figs {
@@ -59,8 +113,15 @@ main figure {
 #figs img {
     border-radius: 16px;
     border: 4px solid blue;
-    height: auto;
+    height: 200px;
+    width: 200px;
     object-fit: cover;
+}
+
+#quote {
+    background-color: #e5e7eb;
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
 blockquote {
@@ -69,16 +130,36 @@ blockquote {
 
 blockquote p {
     margin-left: 10%;
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    color: #1f2937;
 }
 
-#quote footer {
+#quote-footer {
     font-weight: bold;
     text-align: right;
 }
 
-#cta {
+.cta {
     padding-top: 64px;
     padding-bottom: 64px;
+}
+
+.cta.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 64px;
+}
+
+.cta.container button {
+    border: 2px solid white;
+}
+
+.cta.container h3,
+.cta.container p {
+    margin: 0;
 }
 
 footer {
